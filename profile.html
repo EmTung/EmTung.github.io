@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="description" content="First Website"/>
+	<meta name="developer" content="Em tung"/>
+	<title>
+		emtunghoclaptrinh
+	</title>
+	<link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+	<h1 id="chude">Blog: Phân Tích Dữ Liệu Điểm Thi Môn Toán THPT 2024</h1>
+	<img id="anhthithpt" src="assets\anhthithpt.jpg" src="anhthithpt" width="500" height="300">
+	<hr/>
+	<h2>Mục lục :</h2>
+	<nav>
+  		<a href="#gioithieu?">1.Giới thiệu dự án</a>
+  		<a href="#why">2.Tại sao chọn dự án này?</a>
+  		<a href="#quytrinh">3.Quy trình thực hiện tạo biểu đồ để phân tích</a>
+  		<a href="#danhgia">4.Đánh giá và phân tích dựa trên biểu đồ vừa tạo </a>
+  		<a href="#ketbai">5.Kết bài</a>
+	</nav>
+
+	<hr/>
+	<h2 id="gioithieu">1.Giới thiệu dự án </h2>
+	<p>Chào các bạn, mình là Lê Trí Tùng, sinh viên khoa học máy tính và hiện tại mình đang thực hiện một dự án nghiên cứu về phân tích dữ liệu điểm thi môn toán THPT 2024. Mục tiêu của dự án này là sử dụng Data Science để phân tích dữ liệu điểm thi, tìm hiểu các xu hướng và yếu tố ảnh hưởng đến kết quả thi. Dữ liệu về điểm thi không chỉ là con số mà còn chứa đựng nhiều thông tin hữu ích nếu được khai thác đúng cách.
+	</p>
+	<hr/>
+	<h2 id="why">2.Tại sao chọn dự án này?</h2>
+	<p>Kỳ thi THPT Quốc gia là sự kiện quan trọng đối với hàng triệu học sinh và gia đình trên cả nước. Kết quả của kỳ thi này không chỉ quyết định khả năng vào đại học của các em mà còn phản ánh nhiều khía cạnh của nền giáo dục. Mình chọn dự án này vì mình tin rằng, thông qua việc phân tích dữ liệu, chúng ta có thể hiểu rõ hơn về những yếu tố ảnh hưởng đến kết quả thi và có thể đưa ra các đề xuất cải thiện giáo dục trong tương lai. </p>
+	<hr/>
+	<h2 id="quytrinh">3. Quy trình thực hiện tạo biểu đồ để phân tích</h2>
+	<h3>Dự án của mình gồm các bước chính sau:</h3>
+	<ul>
+		<li><strong>Bước 1:</strong> Chuẩn bị dữ liệu
+		Thu thập dữ liệu điểm thi THPT 2024: Tìm nguồn dữ liệu về điểm thi các môn học, theo tỉnh/thành phố.
+		Dữ liệu địa lý Việt Nam (GeoJSON): Tìm hoặc tạo dữ liệu địa lý dạng GeoJSON cho Việt Nam, bao gồm biên giới các tỉnh/thành phố.
+		</li>
+		<li>
+			<strong>Bước 2:</strong> Cài đặt thư viện Python
+			Cài đặt các thư viện cần thiết:<br/><em>pip install geopandas pandas matplotlib folium</em>
+		</li>
+		<li>
+			<strong>Bước 3:</strong> Nhập và làm sạch dữ liệu
+			<ul>
+				<li><strong>Nhập dữ liệu:</strong> Đọc dữ liệu điểm thi từ file CSV (hoặc Excel) và dữ liệu địa lý từ file GeoJSON.</li>
+				<li><strong>Làm sạch dữ liệu:</strong> Kiểm tra và xử lý các giá trị bị thiếu, định dạng lại các cột nếu cần thiết</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Bước 4:</strong> Ghép dữ liệu điểm thi với dữ liệu địa lý<br/>
+			<ul>
+				<li><strong>Merge dữ liệu:</strong> Ghép dữ liệu điểm thi với dữ liệu địa lý dựa trên tên tỉnh/thành phố để có thể hiển thị trên bản đồ.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Bước 5:</strong> Phân tích dữ liệu<br/>
+			<ul>
+				<li><strong>Tính toán các chỉ số:</strong> Tính toán các chỉ số quan trọng như điểm trung bình theo từng tỉnh, số thí sinh đạt điểm cao, v.v.</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Bước 6:</strong> Trực quan hóa dữ liệutạo biểu đồ vùng miền (Choropleth Map):
+			<ul>
+				<li>Dùng Geopandas và Matplotlib để hiển thị bản đồ với màu sắc phản ánh điểm trung bình của từng tỉnh.</li>
+			</ul> 
+		</li>
+
+	</ul>
+	<hr/>
+	<h2 id="danhgia">
+		4. Đánh giá và phân tích dựa trên biểu đồ vừa tạo 
+	</h2>
+	<h3>
+		Từ 3 biểu đồ biểu diễn các chỉ số khác nhau về môn Toán trong kỳ thi THPT 2024 tại Việt Nam, chúng ta có thể rút ra một số nhận xét như sau:
+	</h3>
+	<ol>
+		<li><p><strong>Biểu đồ thứ nhất thể hiện điểm trung bình môn Toán:</strong></p>
+			<ul>
+					<img src="assets\avgtoan.png" src="avgtoan" width="1000" height="800">
+				<li>
+					Các tỉnh thuộc miền Nam, đặc biệt là khu vực Đông Nam Bộ (Bình Dương, Long An) và đồng bằng sông Cửu Long có điểm trung bình cao hơn so với các khu vực miền Trung và miền Bắc.
+				</li>
+				<li>
+					Khu vực Bắc Trung Bộ và Tây Nguyên có xu hướng điểm trung bình thấp hơn, với các vùng màu nhạt cho thấy sự chênh lệch về điểm trung bình giữa các tỉnh.
+				</li>
+				<li>
+					Hà Nội, Hải Phòng, và một số tỉnh miền Bắc khác cũng có điểm trung bình cao hơn so với các tỉnh miền núi phía Bắc.
+				</li>
+			</ul>
+		</li><br/>
+		<li><strong><p>Biểu đồ thứ hai thể hiện độ lệch chuẩn của điểm Toán:</strong></p>
+			<ul>
+				<img src="assets\stdtoan.png" src="stdtoan" width="1000" height="800">
+				<li>
+					Khu vực miền núi phía Bắc (Cao Bằng, Bắc Kạn, Lạng Sơn) và các tỉnh Tây Nguyên (Gia Lai, Đắk Nông) có độ lệch chuẩn lớn hơn, biểu thị sự phân hóa rõ rệt về điểm số trong khu vực.
+				</li>
+				<li>
+					Các tỉnh đồng bằng sông Cửu Long có độ lệch chuẩn thấp hơn, cho thấy sự đồng đều hơn về kết quả thi cử ở các tỉnh này.
+				</li>
+				<li>
+					Các thành phố lớn như Hà Nội, Hải Phòng và các tỉnh khu vực miền Trung và Bắc Trung Bộ có độ lệch chuẩn trung bình, tức là sự phân hóa về điểm số không quá rõ ràng.
+				</li>
+			</ul>
+		</li><br/>
+				<li><p><strong>Biểu đồ thứ ba thể hiện tỷ lệ phần trăm học sinh có điểm trên 9:</strong><p>
+			<ul>
+				<img src="assets\hsgtoan.png" src="stdtoan" width="1000" height="800">
+				<li>
+					Các tỉnh như Hà Nội, Hải Phòng, và khu vực đồng bằng sông Hồng có tỷ lệ học sinh đạt điểm cao (trên 9) cao hơn so với phần lớn các khu vực khác.
+				</li>
+				<li>
+					Bình Dương là tỉnh miền Nam có tỷ lệ phần trăm học sinh đạt điểm trên 9 cao nhất, thể hiện qua màu sắc đậm ở khu vực này.
+				</li>
+				<li>
+					Các tỉnh miền núi phía Bắc và một số tỉnh miền Trung có tỷ lệ phần trăm học sinh đạt điểm trên 9 thấp hơn nhiều so với khu vực đồng bằng.
+				</li>
+			</ul>
+		</li><br/>
+		<li>
+			<p><strong>Tổng quan:</strong></p>
+			<ul>
+				<li>
+					Miền Nam, đặc biệt là Bình Dương và khu vực Đông Nam Bộ, có sự nổi bật cả về điểm trung bình lẫn tỷ lệ học sinh đạt điểm cao.
+				</li>
+				<li>
+					Miền Bắc, đặc biệt là các thành phố lớn như Hà Nội và Hải Phòng, cũng có kết quả tốt với điểm trung bình cao và tỷ lệ học sinh đạt điểm trên 9 lớn.
+				</li>
+				<li>
+					Khu vực miền núi phía Bắc và miền Trung có sự phân hóa lớn về điểm số, với nhiều tỉnh có điểm trung bình thấp và độ lệch chuẩn cao, cho thấy sự khác biệt rõ rệt giữa các học sinh trong cùng khu vực.
+				</li>
+			</ul>
+		</li>
+	</ol>
+	<hr/>
+	<h2 id="ketbai">
+		<strong>5. Kết bài</strong>
+	</h2>
+	<p>	
+		Trên đây là bài phân tích của mình về điểm thi tốt nghiệp môn Toán THPT năm 2024. Mong rằng sau bài viết này, các bạn có thể thấy được sự thú vị của Data Science, đặc biệt là ở mảng Data Analytic. Với những bạn muốn tham khảo cách mình xử lí data thì mình có để link colab (bài làm của mình,mình còn phân tích cả những môn khác và cả những năn khác) ở phía dưới:
+	</p>
+	<footer>
+		<a href="https://colab.research.google.com/drive/1DuIHhR16AuNQxw59jB20FN_EAOPKpwyq#scrollTo=MT3K-opTctUD" name="Link colab">
+			Link Colab
+		</a><br/>
+		<a href="https://www.facebook.com/profile.php?id=100071541945682" name="Link facebook">Link Facebook</a>
+	</footer>
+	<hr/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</body>
+</html>
+
